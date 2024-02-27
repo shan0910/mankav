@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Flask
 itsdangerous
 Jinja2
@@ -12,3 +13,19 @@ gunicorn
 itsdangerous
 kiwisolver
 threadpoolctl
+=======
+Flask
+itsdangerous
+Jinja2
+MarkupSafe
+Werkzeug
+numpy
+scipy
+scikit-learn
+matplotlib
+pandas
+gunicorn
+itsdangerous
+kiwisolver
+threadpoolctl
+>>>>>>> 7c8d272 (initial commit)

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<p lang="en">
+    <head>
+        <title>Liver Report</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+        <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/carousel/">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+
+
+        <script type="text/javascript" language="JavaScript">
+
+            window.onload = function () {
+                document.getElementById("download")
+                    .addEventListener("click", () => {
+                        const invoice = this.document.getElementById("Liver-invoice");
+                        console.log(invoice);
+                        console.log(window);
+                        var opt = {
+                            margin: 1,
+                            filename: 'Liver_Assessment.pdf',
+                            image: { type: 'jpeg', quality: 0.98 },
+                            html2canvas: { scale: 2 },
+                            jsPDF: { unit: 'in', format: 'letter', orientation: 'landscape' }
+                        };
+                        html2pdf().from(invoice).set(opt).save();
+                    })
+            }
+
+        </script>
+
+
+
+        <style>
+            body {
+                color:white;
+                font-family: 'Poppins', sans-serif;
+               
+            }
+
+            .header {
+                width: 100%;
+                margin-top: 0px;
+            }
+
+            .container {
+                text-align: center;
+                padding: 25px 25px 25px 25px;
+                width: 100%;
+                height: 325px;
+                padding: 7px;
+                background-color: rgba(164, 192, 221, 0.15);
+                border: 7px solid rgba(0, 123, 255, .2);
+                border-radius: 7px;
+            }
+            .container .report-lines{
+                margin-top: 100px;
+                text-align: justify;
+            }
+
+            .download-btn-container{
+              text-align: center;
+              justify-items: center;
+              align-items: center;
+              padding-top: 11px;
+              padding-bottom: 11px;
+            }
+
+
+            .h3-lines{
+                color: black;
+                background-color: white;
+                font-size: 1.5rem;
+                text-align: justify;
+                padding: 21px 21% 21px 21%;
+            }
+
+
+            .Download-btn {
+                margin: auto;
+                font: 1.5rem;
+                font-weight: 700;
+                text-align:center;
+                background-color: rgb(65, 65, 171);
+                border-radius: 7px;
+                padding: 7px 7px 7px 7px;
+                cursor: pointer;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div id="Liver-invoice">
+        
+            <div class="header ">
+                <h1 class="display-5" style="text-align: center; color :black">Your Liver Report</h1>
+                <p class="lead" style="text-align: center;color :black">Please find your Report Analysis below</p>
+            </div>
+            <div class="container">
+
+                       <div class="report-lines">
+
+                        <h3 class="h3-lines">{{prediction_text}}</h3>
+                        
+                       </div>
+                </div>
+
+<div class="download-btn-container">
+    <button  class="Download-btn" id="download">Download</button>
+</div>
+
+            <div>
+                <p style="text-align: center;color :black"># staysafe & healthy</p>
+                <p style="text-align: center;color :black">&copy;mankav</p>
+        </div>
+    </div>
+    </body>
+
+    </html>
