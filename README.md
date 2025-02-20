@@ -15,9 +15,9 @@
 | Disease      | Algorithm Used | Accuracy     |
 | :---        |    :----:   |          ---: |
 | Diabetes      | Support Vector Machine (SVM)      | 75%   |
-| Heart Ailment   | Logistic Regression        | 81%     |
-| Kidney Disease | Random Forests | 100% |
-| Liver Disease | Random Forests | 73% |
+| Heart Ailment   | KNN        | 81%     |
+| Kidney Disease | KNN | 95 % |
+| Liver Disease | KNN | 73% |
 
 ## Note
 
